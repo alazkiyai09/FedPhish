@@ -1,0 +1,68 @@
+[project]
+name = "unified-phishing-api"
+version = "1.0.0"
+description = "Unified Phishing Detection API - Production-ready REST API serving multiple ML models"
+authors = [
+    {name = "Portfolio Project", email = "noreply@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+keywords = ["phishing", "detection", "ml", "api", "fastapi", "security"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "fastapi>=0.104.1",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "redis[hiredis]>=5.0.1",
+    "prometheus-client>=0.19.0",
+    "xgboost>=2.0.2",
+    "scikit-learn>=1.3.2",
+    "torch>=2.1.1",
+    "transformers>=4.35.2",
+    "aiohttp>=3.9.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.3",
+    "pytest-asyncio>=0.21.1",
+    "pytest-cov>=4.1.0",
+    "httpx>=0.25.2",
+    "black==23.12.0",
+    "flake8==6.1.0",
+    "mypy==1.7.1",
+]
+
+load = [
+    "locust>=2.18.3",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+asyncio_mode = "auto"

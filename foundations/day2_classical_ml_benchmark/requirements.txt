@@ -1,0 +1,35 @@
+# Phishing Classifier Benchmark - Requirements
+# Classical ML Baselines for Phishing Detection
+
+# Core ML libraries
+scikit-learn>=1.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Gradient boosting libraries
+xgboost>=2.0.0
+lightgbm>=4.0.0
+catboost>=1.2.0
+
+# Hyperparameter optimization
+optuna>=3.3.0
+
+# Model interpretation
+shap>=0.42.0
+
+# Imbalanced learning
+imbalanced-learn>=0.11.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Utilities
+scipy>=1.10.0
+tqdm>=4.65.0
+
+# Development (optional)
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+# black>=23.7.0
+# isort>=5.12.0

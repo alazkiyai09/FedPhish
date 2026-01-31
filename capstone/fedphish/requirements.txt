@@ -1,0 +1,82 @@
+# Core Dependencies
+torch==2.1.0
+transformers==4.35.0
+datasets==2.14.7
+tokenizers==0.14.1
+
+# Federated Learning
+flwr==1.6.0
+flwr[simulation]
+
+# Privacy
+tenseal==0.3.3
+opacus==1.3.0
+diffprivlib==0.6.0
+
+# Machine Learning
+xgboost==2.0.2
+scikit-learn==1.3.2
+numpy==1.24.3
+pandas==2.0.3
+scipy==1.11.4
+
+# API & Web
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+requests==2.31.0
+aiohttp==3.9.1
+
+# Monitoring & Logging
+prometheus-client==0.19.0
+structlog==23.2.0
+rich==13.7.0
+tqdm==4.66.1
+
+# Configuration
+pyyaml==6.0.1
+omegaconf==2.3.0
+hydra-core==1.16.0
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+pytest-mock==3.12.0
+
+# Code Quality
+black==23.12.0
+ruff==0.1.8
+mypy==1.7.1
+pre-commit==3.6.0
+
+# Data Processing
+nltk==3.8.1
+beautifulsoup4==4.12.2
+whoosh==2.7.4
+urlnormalize==1.4.4
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.0
+plotly==5.18.0
+shap==0.43.0
+
+# Utilities
+python-dotenv==1.0.0
+click==8.1.7
+typer==0.9.0
+httpx==0.25.2
+
+# Zero-Knowledge Proofs
+py-sr25519-bindings==0.1.2
+py-evm==0.7.0a0
+
+# TEE/SGX (optional)
+pybind11==2.11.1
+
+# Development
+ipython==8.18.1
+jupyter==1.0.0
+ipywidgets==8.1.1
