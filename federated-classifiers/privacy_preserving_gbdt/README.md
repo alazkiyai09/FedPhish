@@ -2,7 +2,7 @@
 
 Implementation of Guard-GBDT concepts for federated phishing detection, based on:
 
-> "Guard-GBDT: Efficient Privacy-Preserving Approximated GBDT Training" (Russello et al., 2025)
+> "Guard-GBDT: Efficient Privacy-Preserving Approximated GBDT Training" (researchers, 2025)
 
 ## Overview
 
@@ -206,7 +206,7 @@ pytest tests/test_federated.py -v      # Federated infrastructure
 
 ## References
 
-1. Guard-GBDT: "Efficient Privacy-Preserving Approximated GBDT Training" (Russello et al., 2025)
+1. Guard-GBDT: "Efficient Privacy-Preserving Approximated GBDT Training" (researchers, 2025)
 2. XGBoost: "XGBoost: A Scalable Tree Boosting System" (Chen & Guestrin, 2016)
 3. Differential Privacy: "The Algorithmic Foundations of Differential Privacy" (Dwork & Roth, 2014)
 4. Secret Sharing: "How to Share a Secret" (Shamir, 1979)
@@ -217,6 +217,6 @@ MIT License - See LICENSE file for details
 
 ## Authors
 
-Implementation for PhD portfolio project - Privacy-Preserving Machine Learning
+Implementation for research portfolio project - Privacy-Preserving Machine Learning
 
 Prof. N. Russello (Advisor)

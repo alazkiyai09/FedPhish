@@ -1,6 +1,6 @@
 # Cross-Bank Federated Phishing Detection
 
-A complete federated learning system for collaborative phishing detection across 5 banks, built for PhD portfolio (RQ1).
+A complete federated learning system for collaborative phishing detection across 5 banks, built for research portfolio (RQ1).
 
 ## Overview
 
@@ -117,7 +117,7 @@ Edit `config/bank_profiles.yaml` to adjust bank characteristics.
 
 ## Research Context
 
-This is **RQ1** for the PhD portfolio:
+This is **RQ1** for the research portfolio:
 
 > "How can financial institutions collaboratively train phishing detection models using federated learning while preserving data privacy through hybrid HE/TEE mechanisms?"
 

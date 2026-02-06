@@ -4,7 +4,7 @@ Combining Zero-Knowledge Proofs with Byzantine-Robust Aggregation for Secure Fed
 
 ## Overview
 
-This project addresses **RQ2** from the PhD research portfolio: *How can federated phishing detection systems be robust against both evasion attacks (adversarial phishing emails) and poisoning attacks (malicious participants)?*
+This project addresses the research question: *How can federated phishing detection systems be robust against both evasion attacks (adversarial phishing emails) and poisoning attacks (malicious participants)?*
 
 ### Problem Statement
 
@@ -432,12 +432,11 @@ This project addresses **RQ2**: *How can federated phishing detection systems be
 If you use this code in your research, please cite:
 
 ```bibtex
-@phdthesis{robust_verifiable_phishing_fl,
+@software{robust_verifiable_phishing_fl,
   title={Robust Verifiable Federated Learning for Phishing Detection},
-  author={Your Name},
+  author={Ahmad Whafa Azka Al Azkiyai},
   year={2024},
-  school={University of Nevada, Reno},
-  note={Advisor: Prof. Revanth Dadape}
+  url={https://github.com/alazkiyai09/FedPhish}
 }
 ```
 
@@ -453,11 +452,9 @@ MIT License - see LICENSE file for details
 
 - Day 10: Verifiable FL with ZK Proofs
 - Days 15-20: Adversarial Robustness Portfolio
-- Prof. Revanth Dadape: PhD Advisor
-- University of Nevada, Reno: Cyber Defense Center
 
 ---
 
 ## Contact
 
-For questions or issues, please open a GitHub issue or contact [your-email@unr.edu].
+For questions or issues, please open a GitHub issue.

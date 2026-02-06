@@ -340,7 +340,7 @@ This implementation showcases:
 4. **System Design**: Scalable verifiable aggregation
 5. **Documentation**: Clear explanations of complex concepts
 
-**Perfect for**: PhD application to work with Prof. Russello on privacy-preserving ML
+**Perfect for**: research application to work with Giovanni Russello on privacy-preserving ML
 
 ---
 

@@ -248,7 +248,7 @@ The Cross-Bank Federated Phishing Detection system successfully demonstrates:
 The implementation is **production-ready** and suitable for:
 - Real-world deployment in banking scenarios
 - Academic publication and conference submission
-- PhD portfolio and dissertation
+- research portfolio and dissertation
 - Further research and extension
 
 ---

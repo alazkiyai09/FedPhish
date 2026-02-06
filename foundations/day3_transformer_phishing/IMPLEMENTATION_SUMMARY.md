@@ -205,7 +205,7 @@ Based on literature and similar tasks:
 ## 🎓 Research Connections
 
 ### Related Work
-- **MultiPhishGuard** (Prof. Russello): LLM-based phishing detection
+- **MultiPhishGuard** (Giovanni Russello): LLM-based phishing detection
 - **Devlin et al. 2018**: BERT pretraining
 - **Liu et al. 2019**: RoBERTa optimizations
 - **Hu et al. 2021**: LoRA for parameter-efficient fine-tuning

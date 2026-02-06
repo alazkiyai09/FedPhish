@@ -283,7 +283,7 @@ Attention Head 11, Layer 11:
 - **Liu et al. (2019)**: RoBERTa: A Robustly Optimized BERT Pretraining Approach
 - **Sanh et al. (2019)**: DistilBERT: A Distilled Version of BERT
 - **Hu et al. (2021)**: LoRA: Low-Rank Adaptation of Large Language Models
-- **MultiPhishGuard**: Prof. Russello's work on LLM-based phishing detection
+- **MultiPhishGuard**: Giovanni Russello's work on LLM-based phishing detection
 
 ## Future Extensions
 
@@ -300,4 +300,4 @@ MIT License
 ## Author
 
 21-Day Portfolio Project - Transformer Phishing Detection
-PhD Preparation with Prof. Russello
+PhD Preparation with Giovanni Russello

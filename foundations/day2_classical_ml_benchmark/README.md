@@ -344,24 +344,14 @@ pytest --cov=src tests/
 ## References
 
 - **Fraud Detection Background**: 3+ years with SAS Fraud Management
-- **Previous Work**: 30-day Federated Learning portfolio with imbalanced classification
-- **Research Group**: Prof. Russello (HT2ML Lab)
-- **Day 1 Feature Pipeline**: `/home/ubuntu/21Days_Project/day1_feature_pipeline/`
+- **Previous Work**: 21-Day Federated Learning portfolio
+- **Day 1 Feature Pipeline**: `/home/ubuntu/21Days_Project/phishing_email_analysis/`
 
 ---
 
 ## License
 
-This project is part of a PhD research portfolio. Contact for licensing information.
-
----
-
-## Contact
-
-For questions about this benchmark or collaboration on federated phishing detection:
-- **Research Group**: HT2ML Lab
-- **Advisor**: Prof. Russello
-- **Project**: MultiPhishGuard - Federated Learning for Phishing Detection
+MIT License - See LICENSE file for details.
 
 ---
 

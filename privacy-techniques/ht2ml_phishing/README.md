@@ -2,7 +2,7 @@
 
 **Privacy-Preserving Machine Learning using Homomorphic Encryption and Trusted Execution Environments**
 
-Inspired by Prof. Russello's HT2ML Paper
+Inspired by Giovanni Russello's HT2ML Paper
 
 ---
 
@@ -486,7 +486,7 @@ If you use this implementation in your research, please cite:
   title={HT2ML: Hybrid HE/TEE Phishing Detection System},
   author={Your Name},
   year={2025},
-  note={Inspired by Prof. Russello's HT2ML Paper},
+  note={Inspired by Giovanni Russello's HT2ML Paper},
   url={https://github.com/yourusername/ht2ml_phishing}
 }
 ```

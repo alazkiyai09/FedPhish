@@ -308,6 +308,6 @@ MIT License - See LICENSE file for details
 
 ## Acknowledgments
 
-- Prof. Russello's group for HT2ML and ZK proof research
+- Giovanni Russello's group for HT2ML and ZK proof research
 - Flower framework for federated learning infrastructure
 - Day 9 ZK proof system implementation

@@ -1,6 +1,6 @@
 # Multi-Agent Phishing Detector
 
-A multi-agent LLM system for phishing email detection, inspired by MultiPhishGuard (Russello et al., 2025). The system uses specialized agents that analyze different aspects of emails (URLs, content, headers, visuals) and a coordinator that aggregates their findings.
+A multi-agent LLM system for phishing email detection. The system uses specialized agents that analyze different aspects of emails (URLs, content, headers, visuals) and a coordinator that aggregates their findings.
 
 ## Architecture
 
@@ -245,7 +245,6 @@ MIT License - see LICENSE file for details.
 
 ## Acknowledgments
 
-- Inspired by "MultiPhishGuard: An LLM-based Multi-Agent System for Phishing Email Detection" (Russello et al., 2025)
 - Built with Pydantic, asyncio, and LangChain-inspired patterns
 
 ## Future Work

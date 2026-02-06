@@ -245,4 +245,4 @@ MIT License - See LICENSE file for details
 
 ## Author
 
-Building on work by Prof. Russello's group on HT2ML and privacy-preserving ML.
+Building on work by Giovanni Russello's group on HT2ML and privacy-preserving ML.

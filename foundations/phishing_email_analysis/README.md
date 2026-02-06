@@ -313,7 +313,7 @@ This pipeline is designed to feed into a **federated learning system** for finan
 
 ## Contributing
 
-This project is part of a PhD research portfolio on federated phishing detection.
+This project is part of a research portfolio on federated phishing detection.
 
 ## Citation
 
@@ -333,5 +333,3 @@ If you use this pipeline in your research, please cite:
 MIT License - See LICENSE file for details.
 
 ---
-
-**Built for PhD research on Federated Phishing Detection with Prof. Russello at University of Auckland**

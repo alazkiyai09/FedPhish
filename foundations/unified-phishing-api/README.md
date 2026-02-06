@@ -389,7 +389,7 @@ This is part of a 21-day portfolio project. For questions:
 
 ## License
 
-This is a portfolio project for PhD application purposes.
+This is a portfolio project for research application purposes.
 
 ## Acknowledgments
 
