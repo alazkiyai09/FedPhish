@@ -117,7 +117,7 @@ class CheckpointManager:
         if not model_path.exists():
             return False
 
-        model.load_state_dict(torch.load(model_path))
+        model.load_state_dict(torch.load(model_path, weights_only=True))
         return True
 
     def clear_cache(self, older_than_days: Optional[int] = None) -> None:

@@ -189,7 +189,7 @@ def load_lora_adapters(
         model.load_adapters(str(load_dir))
     else:
         # Manually load LoRA parameters
-        lora_state_dict = torch.load(load_dir / 'lora_adapters.pt')
+        lora_state_dict = torch.load(load_dir / 'lora_adapters.pt', weights_only=True)
 
         model_state_dict = model.state_dict()
         for name, param in lora_state_dict.items():

@@ -7,13 +7,16 @@ in Trusted Execution Environment.
 """
 
 from typing import Dict, Any, Optional
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, asdict
 import numpy as np
-import pickle
+import json
 import hashlib
+import logging
 from pathlib import Path
 
 from src.model.phishing_classifier import PhishingClassifier
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -29,15 +32,80 @@ class SealedModel:
     metadata: Dict[str, Any] = field(default_factory=dict)
 
     def save(self, path: str) -> None:
-        """Save sealed model to file."""
-        with open(path, 'wb') as f:
-            pickle.dump(self, f)
+        """
+        Save sealed model to file using JSON + numpy format.
 
-    @staticmethod
-    def load(path: str) -> 'SealedModel':
-        """Load sealed model from file."""
-        with open(path, 'rb') as f:
-            return pickle.load(f)
+        This avoids the security risks of pickle by storing data in
+        a structured format that only contains basic types.
+        """
+        path_obj = Path(path)
+        path_obj.parent.mkdir(parents=True, exist_ok=True)
+
+        # Save weights as .npz file
+        weights_path = path_obj.with_suffix('.weights.npz')
+
+        # Convert bytes to numpy arrays for storage
+        weight_arrays = {}
+        weight_shapes = {}
+        for key, weight_bytes in self.sealed_weights.items():
+            arr = np.frombuffer(weight_bytes, dtype=np.uint8)
+            weight_arrays[key] = arr
+            weight_shapes[key] = arr.shape
+
+        np.savez_compressed(weights_path, **weight_arrays)
+
+        # Save metadata as JSON
+        metadata_path = path_obj.with_suffix('.meta.json')
+        metadata_dict = {
+            'sealed_weights_shapes': weight_shapes,
+            'model_measurement': self.model_measurement.hex(),
+            'model_config': self.model_config,
+            'metadata': self.metadata,
+        }
+
+        with open(metadata_path, 'w') as f:
+            json.dump(metadata_dict, f, indent=2)
+
+        logger.info(f"Sealed model saved to {path}")
+
+    @classmethod
+    def load(cls, path: str) -> 'SealedModel':
+        """
+        Load sealed model from file using JSON + numpy format.
+
+        This avoids the security risks of pickle.
+        """
+        path_obj = Path(path)
+
+        # Load metadata
+        metadata_path = path_obj.with_suffix('.meta.json')
+        try:
+            with open(metadata_path, 'r') as f:
+                metadata_dict = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            logger.error(f"Failed to load metadata from {metadata_path}: {e}")
+            raise ValueError(f"Invalid sealed model: missing or corrupt metadata") from e
+
+        # Load weights
+        weights_path = path_obj.with_suffix('.weights.npz')
+        try:
+            weights_data = np.load(weights_path, allow_pickle=False)
+        except (FileNotFoundError, OSError) as e:
+            logger.error(f"Failed to load weights from {weights_path}: {e}")
+            raise ValueError(f"Invalid sealed model: missing or corrupt weights") from e
+
+        # Reconstruct weights
+        sealed_weights = {}
+        for key in weights_data.files:
+            sealed_weights[key] = weights_data[key].tobytes()
+
+        # Reconstruct object
+        return cls(
+            sealed_weights=sealed_weights,
+            model_measurement=bytes.fromhex(metadata_dict['model_measurement']),
+            model_config=metadata_dict['model_config'],
+            metadata=metadata_dict.get('metadata', {})
+        )
 
 
 class ModelSerializer:

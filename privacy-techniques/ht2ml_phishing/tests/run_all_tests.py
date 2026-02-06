@@ -44,7 +44,7 @@ def run_test_suite(name, script_path):
             parts = line.split()
             try:
                 total = int(parts[1])
-            except:
+            except (ValueError, IndexError):
                 pass
 
     success = result.returncode == 0

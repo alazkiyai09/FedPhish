@@ -249,7 +249,7 @@ class Predictor:
         from ..utils.config import TrainingConfig
 
         # Load checkpoint
-        checkpoint = torch.load(checkpoint_path, map_location='cpu')
+        checkpoint = torch.load(checkpoint_path, map_location='cpu', weights_only=True)
 
         # Reconstruct config
         if 'config' in checkpoint:

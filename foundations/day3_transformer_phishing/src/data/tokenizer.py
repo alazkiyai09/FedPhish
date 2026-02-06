@@ -6,6 +6,9 @@ from pathlib import Path
 from typing import Dict, List, Optional, Union
 import pickle
 import hashlib
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class TokenizerWrapper:
@@ -154,29 +157,47 @@ class TokenizerWrapper:
             Dictionary with input_ids and attention_mask
         """
         cache_key = self.get_cache_key(text, max_length)
-        cache_file = self.cache_dir / f"tokens_{cache_key}.pkl"
+        # Use .npz instead of .pkl for safer loading
+        cache_file = self.cache_dir / f"tokens_{cache_key}.npz"
 
-        # Try loading from cache
+        # Try loading from cache using numpy (safer than pickle)
         if self.use_cache and cache_file.exists():
-            with open(cache_file, 'rb') as f:
-                cached_data = pickle.load(f)
-            return cached_data
+            try:
+                import numpy as np
+                cached_data = np.load(cache_file, allow_pickle=False)
+                # Convert back to expected format
+                return {
+                    'input_ids': cached_data['input_ids'].tolist(),
+                    'attention_mask': cached_data['attention_mask'].tolist()
+                }
+            except (OSError, ValueError, EOFError) as e:
+                logger.warning(f"Failed to load cache file {cache_file}: {e}. Retokenizing...")
 
         # Tokenize
         tokenized = self.tokenize(text, max_length=max_length)
 
-        # Save to cache
+        # Save to cache using numpy
         if self.use_cache:
-            with open(cache_file, 'wb') as f:
-                pickle.dump(tokenized, f)
+            try:
+                import numpy as np
+                # Convert tensors to numpy arrays for safe storage
+                input_ids = tokenized['input_ids'].cpu().numpy() if hasattr(tokenized['input_ids'], 'cpu') else tokenized['input_ids']
+                attention_mask = tokenized['attention_mask'].cpu().numpy() if hasattr(tokenized['attention_mask'], 'cpu') else tokenized['attention_mask']
+                np.savez_compressed(cache_file, input_ids=input_ids, attention_mask=attention_mask)
+            except (OSError, ValueError) as e:
+                logger.warning(f"Failed to save cache file {cache_file}: {e}")
 
         return tokenized
 
     def clear_cache(self) -> None:
         """Clear all cached tokenizations."""
-        cache_files = list(self.cache_dir.glob("tokens_*.pkl"))
+        # Clear both old .pkl and new .npz cache files
+        cache_files = list(self.cache_dir.glob("tokens_*.pkl")) + list(self.cache_dir.glob("tokens_*.npz"))
         for cache_file in cache_files:
-            cache_file.unlink()
+            try:
+                cache_file.unlink()
+            except OSError as e:
+                logger.warning(f"Failed to delete cache file {cache_file}: {e}")
         print(f"🗑️  Cleared {len(cache_files)} cached tokenizations")
 
     def save_pretrained(self, path: str) -> None:

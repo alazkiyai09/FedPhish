@@ -93,7 +93,7 @@ class HEData:
             # Try to get size
             try:
                 self.size = self.encrypted_data.size()
-            except:
+            except (AttributeError, TypeError, RuntimeError):
                 self.size = 0
         else:
             self.size = len(self.encrypted_data)
