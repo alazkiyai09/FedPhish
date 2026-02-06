@@ -193,9 +193,9 @@ If you use this benchmark in your research, please cite:
 ```bibtex
 @software{fedphish_benchmark,
   title={FedPhish Benchmark Suite: Comprehensive Evaluation for Federated Phishing Detection},
-  author={Your Name},
+  author={Ahmad Whafa Azka Al Azkiyai},
   year={2025},
-  url={https://github.com/yourusername/fedphish-benchmark}
+  url={https://github.com/alazkiyai09/FedPhish}
 }
 ```
 
@@ -203,10 +203,6 @@ If you use this benchmark in your research, please cite:
 
 MIT License - see LICENSE file for details.
 
-## Acknowledgments
-
-This work consolidates research from a 21-day federated learning security portfolio. For PhD research under Prof. Russello.
-
 ## Contact
 
-For questions or issues, please open a GitHub issue or contact research@example.edu.
+For questions or issues, please open a GitHub issue.

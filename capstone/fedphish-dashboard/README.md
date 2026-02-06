@@ -1,6 +1,6 @@
 # FedPhish Demo Dashboard
 
-Interactive demonstration dashboard for the FedPhish federated phishing detection system. Perfect for PhD interviews, conference presentations, and research showcases.
+Interactive demonstration dashboard for the FedPhish federated phishing detection system. Perfect for presentations, conference demos, and research showcases.
 
 ## 🎯 Purpose
 
@@ -206,7 +206,6 @@ VITE_WS_URL=ws://localhost:8001/ws/federation
 
 - [Demo Guide](docs/DEMO_GUIDE.md) - How to give effective demos
 - [Scenario Walkthroughs](docs/SCENARIO_WALKTHROUGHS.md) - Each scenario explained
-- [Interview Prep](docs/INTERVIEW_PREP.md) - Prof. Russello chat preparation
 
 ## 🐛 Troubleshooting
 
@@ -219,7 +218,7 @@ VITE_WS_URL=ws://localhost:8001/ws/federation
 ### Issue: Docker build fails
 **Solution**: Ensure Docker daemon is running, try `docker system prune -a`
 
-## 🎓 For PhD Interviews
+## 🎓 For Presentations
 
 ### Key Talking Points
 
@@ -243,22 +242,17 @@ If you use this in your research:
 ```bibtex
 @software{fedphish_dashboard,
   title={FedPhish Demo Dashboard},
-  author={Your Name},
+  author={Ahmad Whafa Azka Al Azkiyai},
   year={2024},
-  url={https://github.com/yourusername/fedphish-dashboard}
+  url={https://github.com/alazkiyai09/FedPhish}
 }
 ```
 
 ## 🤝 Contributing
 
-This is a demo dashboard for the FedPhish system. For contributions to the main system, see: https://github.com/yourusername/fedphish
+This is a demo dashboard for the FedPhish system. For contributions to the main system, see: https://github.com/alazkiyai09/FedPhish
 
 ## 📧 Contact
 
 For questions about this dashboard:
-- Email: your@email.com
-- Issues: https://github.com/yourusername/fedphish-dashboard/issues
-
----
-
-**Built for PhD Portfolio - Privacy-Preserving Machine Learning**
+- Issues: https://github.com/alazkiyai09/FedPhish/issues

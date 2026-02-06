@@ -59,7 +59,7 @@ Multiple banks (5+) collaboratively detect phishing attacks across their custome
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/fedphish.git
+git clone https://github.com/alazkiyai09/FedPhish.git
 cd fedphish
 
 # Create virtual environment
@@ -233,9 +233,9 @@ If you use FedPhish in your research, please cite:
 ```bibtex
 @software{fedphish2024,
   title={FedPhish: Federated Phishing Detection for Financial Institutions},
-  author={Your Name},
+  author={Ahmad Whafa Azka Al Azkiyai},
   year={2024},
-  url={https://github.com/yourusername/fedphish}
+  url={https://github.com/alazkiyai09/FedPhish}
 }
 ```
 
@@ -256,8 +256,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-For questions and feedback, please open an issue or contact [your@email.com].
-
----
-
-**Built for PhD Portfolio - Privacy-Preserving Machine Learning**
+For questions and feedback, please open an issue.

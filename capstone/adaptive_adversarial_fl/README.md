@@ -294,9 +294,9 @@ pytest tests/ --cov=src --cov-report=html
 ```bibtex
 @software{adaptive_adversarial_fl,
   title={Adaptive Attack-Defense Framework for Federated Learning},
-  author={Research Team},
+  author={Ahmad Whafa Azka Al Azkiyai},
   year={2025},
-  url={https://github.com/your-repo/adaptive-adversarial-fl}
+  url={https://github.com/alazkiyai09/FedPhish}
 }
 ```
 
@@ -306,4 +306,4 @@ MIT License
 
 ## Acknowledgments
 
-This framework was developed for research on adversarial robustness in federated learning for phishing detection, directly relevant to PhD research on adaptive defense mechanisms.
+This framework was developed for research on adversarial robustness in federated learning for phishing detection.
