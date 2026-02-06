@@ -1,6 +1,6 @@
-# Capstone Projects (Days 15-21)
+# Capstone Projects (Days 15-20)
 
-**Theme**: Complete federated phishing detection system with benchmarking, adversarial attacks, real-time monitoring, and PhD application.
+**Theme**: Complete federated phishing detection system with benchmarking, adversarial attacks, real-time monitoring, and research paper.
 
 ## 📁 Projects
 
@@ -11,7 +11,6 @@
 | 17-18 | `fedphish/` | Production federated phishing system | FastAPI, Docker, FLwr |
 | 19 | `fedphish-dashboard/` | Real-time monitoring dashboard | React, TypeScript |
 | 20 | `fedphish-paper/` | Research paper LaTeX source | LaTeX, Overleaf |
-| 21 | `phd-application-russello/` | PhD application package | Markdown, PDF |
 
 ## 🎯 Learning Objectives
 
@@ -20,7 +19,6 @@
 - **Production Systems**: Build deployable FL infrastructure
 - **Real-Time Monitoring**: Observable systems with dashboards
 - **Academic Communication**: Write publishable research papers
-- **PhD Applications**: Package research for academic positions
 
 ## 🔗 Project Dependencies
 
@@ -33,7 +31,6 @@ Day 19 (Dashboard) ────────────────┘       └
                                            │
 Day 20 (Paper) ─────────────────────────────┤
                                            ├─→ Document system
-Day 21 (PhD App) ───────────────────────────┘    (based on Days 15-18)
 ```
 
 ## 🚀 Quick Start
@@ -78,14 +75,6 @@ pdflatex paper.tex
 pdflatex paper.tex
 ```
 
-### Day 21: PhD Application
-```bash
-cd phd-application-russello
-# Edit application materials
-cat research_statement.md
-cat cover_letter.md
-```
-
 ## 🔬 Key Concepts
 
 ### Federated Learning Benchmark (Day 15)
@@ -114,7 +103,7 @@ benchmark_config = {
     'aggregation': ['fedavg', 'fedprox', 'scaffold'],
     'privacy': {'none': None, 'dp': DifferentialPrivacy(epsilon=1.0)},
     'attacks': {None, 'label_flip', 'backdoor', 'poison'},
-    'defenses': {None, 'krum', 'trimmed_mean', 'differential_privacy'],
+    'defenses': {None, 'krum', 'trimmed_mean', 'differential_privacy'},
 }
 
 # Run all combinations
@@ -247,25 +236,6 @@ class CoevolutionarySimulation:
 8. Discussion
 9. Conclusion
 
-### PhD Application (Day 21)
-
-**Target**: Prof. Giovanni Russello, University of Auckland
-
-**Research Proposal**: "Verifiable Federated Learning for Security-Critical Domains"
-
-**Key Points**:
-- **Problem**: FL is vulnerable to poisoning attacks and lacks verifiability
-- **Contribution**: Combine ZK proofs + robust aggregation + differential privacy
-- **Impact**: Enable cross-organizational ML in healthcare, finance, security
-- **Methods**: Formal proofs, implementation, empirical evaluation
-
-**Portfolio Evidence**:
-- 21 production-quality projects
-- 50,000+ lines of code
-- 461 tests with >90% coverage
-- Publishable research paper
-- Deployable system
-
 ## 📊 Final System Performance
 
 | Metric | Value | Comparison |
@@ -302,13 +272,7 @@ class CoevolutionarySimulation:
 
 ### Day 20: Paper
 - 8 pages, IEEE format
-- Under review (simulated)
 - Companion artifact: FedPhish system
-
-### Day 21: PhD Application
-- Research statement aligned with Prof. Russello's work
-- Strong evidence of capability (21 projects)
-- Clear research roadmap
 
 ## 📈 Performance Over Time
 
@@ -343,7 +307,7 @@ Byzantine Clients: 30% detected and removed
 │  Federated-Classifiers (Days 12-14)                     │
 │  → Vertical FL for cross-bank collaboration            │
 │                                                          │
-│  Capstone (Days 15-21)                                  │
+│  Capstone (Days 15-20)                                  │
 │  → FedPhish: Complete production system                 │
 │                                                          │
 └──────────────────────────────────────────────────────────┘
@@ -351,20 +315,18 @@ Byzantine Clients: 30% detected and removed
 
 ## 🏆 Achievements
 
-- ✅ 21 technical projects + 1 portfolio package
+- ✅ 21 technical projects
 - ✅ 50,000+ lines of production-quality code
-- ✅ 461 tests with >90% coverage
+- ✅ 530+ tests
 - ✅ End-to-end federated learning system
 - ✅ Research paper (publishable quality)
 - ✅ Real-time monitoring dashboard
-- ✅ PhD application ready
 
 ## 📚 Documentation
 
 - **Project README**: Individual project documentation
 - **Benchmark Results**: `fedphish_benchmark/results/`
 - **Paper**: `fedphish-paper/paper.tex`
-- **PhD Application**: `phd-application-russello/`
 - **Code Reviews**: `documentation/CODE_REVIEW_*.md`
 
 ---

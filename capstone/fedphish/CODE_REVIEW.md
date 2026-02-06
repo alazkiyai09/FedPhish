@@ -63,7 +63,7 @@ None - Production-ready federated learning system.
 
 **Quality Score**: 9/10 - Production-ready federated phishing detection system.
 
-**Research Impact**: This system demonstrates PhD-level capability in designing and implementing complex privacy-preserving ML systems.
+**Research Impact**: This system demonstrates advanced capability in designing and implementing complex privacy-preserving ML systems.
 
 **Publication Potential**: System paper describing architecture + empirical results.
 

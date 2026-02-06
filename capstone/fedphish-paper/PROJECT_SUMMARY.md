@@ -195,7 +195,6 @@ pdflatex fedphish_template.tex
 
 For questions about FedPhish research materials:
 - Primary: [Your Name]
-- Advisor: Prof. Russello
 
 ---
 
@@ -209,7 +208,7 @@ All deliverables tested and verified:
 - [x] Supplementary materials created
 - [x] Experiment configurations created
 
-**Status**: Ready for PhD application and conference submission!
+**Status**: Ready for conference submission!
 
 ---
 

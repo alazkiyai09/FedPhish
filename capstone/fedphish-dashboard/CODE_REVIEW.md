@@ -31,4 +31,4 @@
 
 **Quality Score**: 8/10 - Professional demo dashboard.
 
-**Use Case**: Perfect for PhD interview demos and conference presentations.
+**Use Case**: Perfect for technical demos and conference presentations.
