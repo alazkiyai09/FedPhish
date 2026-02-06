@@ -143,7 +143,7 @@ def main():
     """Run all demos."""
     print("\n" + "#"*70)
     print("# HT2ML Hybrid HE/TEE Phishing Detection")
-    print("# Inspired by Prof. Russello's HT2ML Paper")
+    print("# Hybrid Homomorphic Encryption + Trusted Execution Environment")
     print("#"*70)
 
     # Demo 1: Architecture

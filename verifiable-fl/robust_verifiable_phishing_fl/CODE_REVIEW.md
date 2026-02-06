@@ -101,4 +101,4 @@ This project directly addresses **RQ2** from the PhD proposal:
 
 ---
 
-**Alignment with Prof. Russello's Work**: This project extends verifiable FL (Days 9-10) with adversarial robustness, addressing security concerns in deployed federated systems.
+**Alignment with Giovanni Work**: This project extends verifiable FL (Days 9-10) with adversarial robustness, addressing security concerns in deployed federated systems.

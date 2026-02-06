@@ -30,4 +30,4 @@
 
 **Quality Score**: 8/10 - Strong human-aligned explainability.
 
-**Research Connection**: Directly implements "Eyes on the Phish" (Prof. Russello's CHI 2025 paper).
+**Research Connection**: Directly implements "Eyes on the Phish" (Giovanni CHI 2025 paper).

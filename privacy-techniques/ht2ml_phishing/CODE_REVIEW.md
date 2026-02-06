@@ -83,7 +83,7 @@ None.
 
 ## CONCLUSION
 
-**Overall Assessment**: This is an **exemplary implementation** of Prof. Russello's HT2ML paper. The code quality, documentation, and testing are all at publication level.
+**Overall Assessment**: This is an **exemplary implementation** of Giovanni HT2ML paper. The code quality, documentation, and testing are all at publication level.
 
 **Quality Score**: 10/10 - Research publication ready.
 

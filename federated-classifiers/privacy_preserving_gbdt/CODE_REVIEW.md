@@ -12,7 +12,7 @@
 | Privacy-preserving tree splitting | ✅ | Secure histogram aggregation |
 | Vertical FL protocol | ✅ | PSI for sample alignment |
 | Privacy-preserving prediction | ✅ | No single party sees all features |
-| Guard-GBDT alignment | ✅ | Similar to Prof. Russello's work |
+| Guard-GBDT alignment | ✅ | Similar to Giovanni work |
 | Performance comparison | ✅ | Vs plaintext XGBoost |
 | Formal privacy guarantees | ⚠️ | Could be more rigorous |
 
@@ -47,4 +47,4 @@
 
 **Quality Score**: 8/10 - Strong privacy-preserving GBDT implementation.
 
-**Research Connection**: Directly implements Guard-GBDT concepts from Prof. Russello's work.
+**Research Connection**: Directly implements Guard-GBDT concepts from Giovanni work.
