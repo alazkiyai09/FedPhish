@@ -1,7 +1,16 @@
 """
-Zero-knowledge proofs for federated learning.
+Zero-knowledge proof concepts for federated learning.
 
-Verifies gradient bounds without revealing actual gradient values.
+EDUCATIONAL IMPLEMENTATION: This module demonstrates cryptographic commitment
+schemes for privacy-preserving verification. This is NOT a true zero-knowledge
+proof system (which would require zk-SNARKs/libsnark/bellman). Instead, it uses
+hash commitments to illustrate the concepts of ZK proofs in FL.
+
+For production ZK proofs, use:
+- libsnark (C++)
+- bellman (Rust)
+- snarkjs (JavaScript)
+- py-snarks (Python)
 """
 
 import logging

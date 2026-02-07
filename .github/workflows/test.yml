@@ -27,18 +27,22 @@ jobs:
         pip install pytest pytest-cov
 
     - name: Run foundation tests
+      continue-on-error: true
       run: |
-        pytest foundations/ -v || true
+        pytest foundations/ -v
 
     - name: Run federated classifier tests
+      continue-on-error: true
       run: |
-        pytest federated-classifiers/ -v || true
+        pytest federated-classifiers/ -v
 
     - name: Run privacy technique tests
+      continue-on-error: true
       run: |
-        pytest privacy-techniques/ -v || true
+        pytest privacy-techniques/ -v
 
     - name: Lint check
+      continue-on-error: true
       run: |
         pip install ruff
-        ruff check . --output-format=github || true
+        ruff check . --output-format=github
