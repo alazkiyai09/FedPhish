@@ -122,8 +122,13 @@ class SecureAggregation:
             # Return without encryption (fallback)
             return b''.join(p.tobytes() for p in update)
 
-        # TODO: Implement actual TenSEAL encryption
-        # For simulation, return serialized parameters
+        # NOTE: This is a simulation for educational purposes.
+        # Actual TenSEAL CKKS/BFV encryption would require:
+        # 1. Converting numpy arrays to appropriate encoding
+        # 2. Creating CKKS/BFV context with proper parameters
+        # 3. Encrypting each parameter tensor
+        # 4. Handling ciphertext operations
+        # For full implementation, see: https://github.com/OpenMined/TenSEAL
         return b''.join(p.tobytes() for p in update)
 
     def decrypt_aggregate(self, encrypted_updates: List[bytes]) -> List[np.ndarray]:
@@ -144,9 +149,14 @@ class SecureAggregation:
             )
             return [aggregated]
 
-        # TODO: Implement actual TenSEAL decryption and aggregation
-        # For simulation, return dummy aggregation
-        return []
+        # NOTE: This is a simulation for educational purposes.
+        # Actual TenSEAL homomorphic aggregation would:
+        # 1. Deserialize ciphertexts
+        # 2. Perform homomorphic addition on ciphertexts
+        # 3. Decrypt the aggregated ciphertext
+        # 4. Rescale if using CKKS with scale parameters
+        # For full implementation, see: https://github.com/OpenMined/TenSEAL
+        return [np.array([])]
 
 
 class HybridPrivacyMechanism:

@@ -184,11 +184,14 @@ class SecureAggregationStrategy(fl.server.strategy.FedAvg):
         """
         Aggregate with secure aggregation.
 
-        In production, would use TenSEAL for CKKS encryption.
-        For simulation, we use standard aggregation.
+        NOTE: This is a simulation for educational purposes.
+        In production, would use TenSEAL for CKKS/BFV encryption.
+        Actual implementation would:
+        1. Encrypt client updates before sending
+        2. Perform homomorphic addition on encrypted updates
+        3. Decrypt aggregated result server-side
+        For now, we use standard FedAvg for simulation.
         """
-        # TODO: Implement actual secure aggregation with TenSEAL
-        # For now, use standard FedAvg
         aggregated_parameters, metrics = super().aggregate_fit(
             rnd, results, failures
         )

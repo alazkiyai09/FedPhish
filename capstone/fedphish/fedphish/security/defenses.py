@@ -70,7 +70,7 @@ class KrumDefense(ByzantineDefense):
             num_malicious: Estimated number of malicious clients
             multi_krum: Use Multi-Krum (select top-f closest)
         """
-        super().__init__(num_clients, num_mallicious)
+        super().__init__(num_clients, num_malicious)
         self.multi_krum = multi_krum
 
     def defend(

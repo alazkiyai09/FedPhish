@@ -1,8 +1,8 @@
-# 21-Day Federated Phishing Detection Portfolio
+# Federated Phishing Detection Portfolio
 
 <div align="center">
 
-A comprehensive 21-day portfolio demonstrating advanced **federated learning**, **privacy-preserving machine learning**, and **phishing detection systems**.
+A comprehensive portfolio demonstrating advanced **federated learning**, **privacy-preserving machine learning**, and **phishing detection systems**.
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch)](https://pytorch.org/)
@@ -25,6 +25,8 @@ This portfolio demonstrates expertise in building **privacy-preserving federated
 - **Verifiable FL** using Zero-Knowledge Proofs
 - **Adversarial Robustness** against model poisoning attacks
 - **Production Infrastructure** (APIs, dashboards, Docker/K8s)
+
+> **Note**: This is an educational portfolio demonstrating implementations of established research techniques in federated learning security and privacy-preserving ML.
 
 ## Portfolio Stats
 

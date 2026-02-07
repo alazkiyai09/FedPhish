@@ -211,10 +211,23 @@ class DifferentialPrivacy:
 
         if self.secure_rng:
             # Use cryptographically secure random number generation
+            # Generate secure random bytes and convert to Gaussian using Box-Muller transform
             import secrets
-            noise = np.random.normal(0, scale, gradients.shape)
-            # Note: secrets doesn't directly support Gaussian, using numpy here
-            # In production, use a secure RNG library
+            flat_size = gradients.size
+            # Generate pairs of uniform random bytes for Box-Muller
+            n_pairs = (flat_size + 1) // 2
+            random_bytes = secrets.token_bytes(n_pairs * 8)  # 4 bytes per float (32-bit)
+            # Convert bytes to uniform [0,1)
+            uniform1 = np.frombuffer(random_bytes[:n_pairs*4], dtype=np.uint32) / 4294967296.0
+            uniform2 = np.frombuffer(random_bytes[n_pairs*4:], dtype=np.uint32) / 4294967296.0
+            # Box-Muller transform to Gaussian
+            gaussian1 = np.sqrt(-2 * np.log(uniform1 + 1e-10)) * np.cos(2 * np.pi * uniform2)
+            gaussian2 = np.sqrt(-2 * np.log(uniform1 + 1e-10)) * np.sin(2 * np.pi * uniform2)
+            # Interleave and take needed amount
+            secure_gaussian = np.empty(flat_size)
+            secure_gaussian[0::2] = gaussian1[:len(secure_gaussian[0::2])]
+            secure_gaussian[1::2] = gaussian2[:len(secure_gaussian[1::2])]
+            noise = (secure_gaussian.reshape(gradients.shape) * scale).astype(gradients.dtype)
         else:
             noise = np.random.normal(0, scale, gradients.shape)
 
