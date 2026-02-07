@@ -34,7 +34,7 @@ This portfolio demonstrates expertise in building **privacy-preserving federated
 |--------|-------|
 | **Projects** | 21 across 5 categories |
 | **Python Files** | 643 production files |
-| **Test Files** | 111 test suites |
+| **Test Files** | 71 test files |
 | **Test Coverage** | 530+ tests |
 | **Code Lines** | 50,000+ production lines |
 | **ML Models** | XGBoost, DistilBERT, Custom Neural Networks |
